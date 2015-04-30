@@ -81,6 +81,7 @@
       <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
       <AdditionalOptions> /I </AdditionalOptions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4996;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Midl>
       <TypeLibraryName>.\Debug\MP3Broadcaster.tlb</TypeLibraryName>
@@ -121,6 +122,7 @@
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
       <AdditionalOptions> /I </AdditionalOptions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4996;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Midl>
       <TypeLibraryName>.\Release\MP3Broadcaster.tlb</TypeLibraryName>
@@ -141,6 +143,11 @@
       <OutputFile>..\WinNTSupport\Release\MP3Broadcaster.exe</OutputFile>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;ws2_32.lib;wsock32.lib;winmm.lib;libcmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <ClCompile>
+      <DisableSpecificWarnings>4996;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BroadcasterMain.cpp">

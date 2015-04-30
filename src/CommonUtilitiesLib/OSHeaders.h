@@ -116,8 +116,9 @@
     #define crypt(buf, salt) ((char*)buf)
     
     /* Includes */
-    #include <windows.h>
     #include <winsock2.h>
+	#include <windows.h>
+
     #include <mswsock.h>
     #include <process.h>
     #include <ws2tcpip.h>
@@ -128,14 +129,16 @@
     
     #define R_OK 0
     #define W_OK 1
-        
-    // POSIX errorcodes
-    #define ENOTCONN 1002
-    #define EADDRINUSE 1004
-    #define EINPROGRESS 1007
-    #define ENOBUFS 1008
-    #define EADDRNOTAVAIL 1009
 
+	#if _MSC_VER < 1500
+		//Visual C++ 6.0
+		// POSIX errorcodes
+		#define ENOTCONN 1002
+		#define EADDRINUSE 1004
+		#define EINPROGRESS 1007
+		#define ENOBUFS 1008
+		#define EADDRNOTAVAIL 1009
+	# endif
     // Winsock does not use iovecs
     struct iovec {
         u_long  iov_len; // this is not the POSIX definition, it is rather defined to be

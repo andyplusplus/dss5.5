@@ -23,7 +23,7 @@
  *
  */
 /*
-    File:       QTAccessFile.cpp
+    File:       QTAccessFile.cppewssews
 
     Contains:   This file contains the implementation for finding and parsing qtaccess files.
                 

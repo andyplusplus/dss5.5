@@ -52,8 +52,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\Debug\</OutDir>
-    <IntDir>.\Debug\</IntDir>
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -73,11 +73,11 @@
       <AdditionalIncludeDirectories>../;../Server.tproj/;../CommonUtilitiesLib/;../QTFileLib/;../RTPMetaInfoLib/;../PrefsSourceLib/;../APIModules/;../APIStubLib/;../APICommonCode/;../HTTPUtilitiesLib/;../RTCPUtilitiesLib/;../RTSPClientLib/;../APIModules/QTSSFileModule/;../APIModules/QTSSHttpFileModule/;../APIModules/QTSSAccessModule/;../APIModules/QTSSAccessLogModule/;../APIModules/QTSSPosixFileSysModule/;../APIModules/QTSSAdminModule/;../APIModules/QTSSReflectorModule/;../APIModules/QTSSWebStatsModule/;../APIModules/QTSSWebDebugModule/;../APIModules/QTSSFlowControlModule/;../APIModules/QTSSMP3StreamingModule;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>../WinNTSupport/Win32header.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;DSS_USE_API_CALLBACKS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <AssemblerListingLocation>Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
-      <PrecompiledHeaderOutputFile>.\Debug\StreamingServer.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\Debug\</ObjectFileName>
-      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>Debug\StreamingServer.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>Debug\</ProgramDataBaseFileName>
     </ClCompile>
     <Midl>
       <TypeLibraryName>.\Debug\StreamingServer.tlb</TypeLibraryName>
@@ -94,7 +94,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <OutputFile>..\WinNTSupport\Debug\DarwinStreamingServer.exe</OutputFile>
+      <OutputFile>..\WinNTSupport\Debug\StreamingServer.exe</OutputFile>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;ws2_32.lib;wsock32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
