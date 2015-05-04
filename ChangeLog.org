@@ -1,0 +1,35 @@
+
+
+* Code Change Log
+** Compile with Visual Studio 2013 --- DSS 5.5
+1.	Change order between #include <winsock2.h>     	#include <windows.h>
+2.	Suppress specific warnings if necessary: 4996;4244 -> APICommonCode
+3.	Add "#if _MSC_VER < 1500" to pass compile with Visual Studio 2013
+      Here is how to detect VS versions
+        #ifndef _MSC_VER  // not VC++
+        #elif _MSC_VER < 1400  // older than VC++ 2005
+        #elif _MSC_VER < 1500  // VC++ 2005
+        #elif _MSC_VER < 1600  // VC++ 2008
+        #elif _MSC_VER < 1700  // VC++ 2010
+        #else  // Future versions
+        #endif
+
+* TODO
+[] currently the default folder on windows is c:\Program Files\Darwin Streaming Server\
+      need to Change to local folder
+
+* Helper for debug
+** the project include 
+    xxx.dsp, xxx_1.dsp, ..., xxx_5.dsp
+* Key Info
+** Commandline parameters
+                -d: Don't run as a Win32 Service\n");
+                -p XXX: Specify the default RTSP listening port of the server\n");
+                -c c:\\myconfigpath.xml: Specify a config file path\n");
+                -o c:\\myconfigpath.conf: Specify a DSS 1.x / 2.x config file path\n");
+                -x: Force create new .xml config file from 1.x / 2.x config\n");
+                -i: Install the Darwin Streaming Server service\n");
+                -r: Remove the Darwin Streaming Server service\n");
+                -s: Start the Darwin Streaming Server service\n");
+                -S n: Display server stats in the console every \"n\" seconds\n");
+                -I: Start the server in the idle state\n");

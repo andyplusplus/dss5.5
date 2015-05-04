@@ -105,15 +105,15 @@ int main(int argc, char * argv[])
                 sPort = ::atoi(optarg);
                 break;
             case 'c':
-                Assert(optarg != NULL);// this means we didn't declare getopt options correctly or there is a bug in getopt.
+                Assert(optarg != NULL);
                 theXMLFilePath = optarg;
                 break;
             case 'S':
-                Assert(optarg != NULL);// this means we didn't declare getopt options correctly or there is a bug in getopt.
+                Assert(optarg != NULL);
                 sStatsUpdateInterval = ::atoi(optarg);
                 break;
             case 'o':
-                Assert(optarg != NULL);// this means we didn't declare getopt options correctly or there is a bug in getopt.
+                Assert(optarg != NULL);
                 theConfigFilePath = optarg;
                 break;
             case 'x':
